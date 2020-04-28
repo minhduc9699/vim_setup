@@ -20,6 +20,7 @@ Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kamykn/spelunker.vim'
+Plug 'preservim/nerdcommenter'
 
 call plug#end()
 
