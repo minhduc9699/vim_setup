@@ -19,3 +19,6 @@ kpis
 argparse
 args
 setattr
+plugins
+plugin
+tmux
