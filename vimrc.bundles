@@ -21,6 +21,7 @@ Plug 'ervandew/supertab'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kamykn/spelunker.vim'
 Plug 'preservim/nerdcommenter'
+Plug 'Yggdroot/indentLine'
 
 call plug#end()
 
