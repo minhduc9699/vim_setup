@@ -60,6 +60,8 @@ set termguicolors
 
 set background=dark
 
+set nowrap           " do not automatically wrap on load
+set formatoptions-=t " do not automatically wrap text when typing
 
 colorscheme dracula
 
@@ -116,7 +118,6 @@ nnoremap <Down> :echoe "Use j"<CR>
 nnoremap <Leader>w <C-w>
 nnoremap <Leader>\ :vsplit<CR>
 nnoremap <Leader>/ :split<CR>
-nnoremap <Leader>x :close!<CR>
 
 " Remove highlight
 map <C-h> :nohl<CR>
@@ -158,7 +159,7 @@ let g:lightline = {
       \ 'colorscheme': 'darcula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'cocstatus', 'readonly', 'filename', 'modified' ] ],
+      \             [ 'relativepath', 'cocstatus', 'readonly', 'modified' ] ],
       \   'right': [ [ 'lineinfo', 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
       \ },

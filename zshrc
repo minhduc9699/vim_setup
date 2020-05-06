@@ -21,8 +21,8 @@ POWERLEVEL9K_MODE="awesome-patched"
 ZSH_COLORIZE_STYLE="paraiso-dark"
 
 alias chrome='open -a "Google Chrome"'
-alias connectToEduVPS='ssh root@45.119.84.211 -p 22'
-alias connectToMindx='ssh root@mindx.vn -p 22'
+alias connectToMindxApp='ssh mindxedu@18.139.155.160 -p 22'
+alias connectToMindxData='ssh mindxedu@18.136.99.173 -p 222'
 alias startMongod='mongod --dbpath /usr/local/var/mongodb/data/db'
 PATH="$HOME/anaconda3/bin:$PATH"
 PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
