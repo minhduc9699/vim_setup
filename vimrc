@@ -164,7 +164,7 @@ map / <Plug>(easymotion-sn)
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'darcula',
+      \ 'colorscheme': 'dracula',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'relativepath', 'cocstatus', 'readonly', 'modified' ] ],
