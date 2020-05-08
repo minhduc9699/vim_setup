@@ -126,7 +126,7 @@ map <C-h> :nohl<CR>
 
 " NERD tree configuration
 noremap <C-d> :NERDTreeToggle<CR>
-nnoremap F :NERDTreeFind<CR>
+"nnoremap F :NERDTreeFind<CR>
 
 let NERDTreeShowHidden=1
 
@@ -135,8 +135,8 @@ noremap ` :Files<CR>
 noremap ; :Buffers<CR>
 
 " bind \ (backward slash) to grep shortcut
-nnoremap K :Ag <C-R><C-W><CR>
-nnoremap <C-k> /<C-R><C-W><CR>
+nnoremap F :Ag <C-R><C-W><CR>
+nnoremap f /<C-R><C-W><CR>
 nnoremap \ :Ag<SPACE>
 
 " coc.vim config
@@ -150,9 +150,9 @@ nmap <Leader>f :Format <CR>
 
 " Easymotion
 " s{char}{char} to move to {char}{char} over windows
-nmap <Leader>F <Plug>(easymotion-overwin-f)
+"nmap <Leader>F <Plug>(easymotion-overwin-f)
 " Move to line over windows
-nmap <Leader>L <Plug>(easymotion-overwin-line)
+"nmap <Leader>L <Plug>(easymotion-overwin-line)
 " Search n-chars
 map / <Plug>(easymotion-sn)
 
