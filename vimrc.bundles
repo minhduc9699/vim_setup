@@ -22,6 +22,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kamykn/spelunker.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'Yggdroot/indentLine'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 

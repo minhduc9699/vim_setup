@@ -48,3 +48,6 @@ pymysql
 fetchone
 fetchall
 functools
+metadata
+bigint
+fanpage
