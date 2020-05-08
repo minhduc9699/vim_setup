@@ -105,16 +105,17 @@ au BufRead,BufNewFile .sequelizerc setlocal filetype=javascript
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
 let g:is_posix = 1
-
+let g:surround_no_mappings = 1
+xmap <Leader>s   <Plug>VSurround
 " Use tab with text block
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
 " Get off my lawn
-nnoremap <Left> :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up> :echoe "Use k"<CR>
-nnoremap <Down> :echoe "Use j"<CR>
+"nnoremap <Left> :echoe "Use h"<CR>
+"nnoremap <Right> :echoe "Use l"<CR>
+"nnoremap <Up> :echoe "Use k"<CR>
+"nnoremap <Down> :echoe "Use j"<CR>
 
 nnoremap <Leader>w <C-w>
 nnoremap <Leader>\ :vsplit<CR>
