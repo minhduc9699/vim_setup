@@ -105,6 +105,12 @@ au BufRead,BufNewFile .sequelizerc setlocal filetype=javascript
 " When the type of shell script is /bin/sh, assume a POSIX-compatible
 " shell for syntax highlighting purposes.
 let g:is_posix = 1
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+	\	'separately': {
+	\		'nerdtree': 0,
+	\	}
+	\}
 let g:surround_no_mappings = 1
 xmap <Leader>s   <Plug>VSurround
 " Use tab with text block
