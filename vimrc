@@ -89,11 +89,14 @@ augroup vimrcEx
         \ endif
 augroup END
 
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+
 " Go file config
-au FileType go set noexpandtab
-au FileType go set shiftwidth=4
-au FileType go set softtabstop=4
-au FileType go set tabstop=4
+"au FileType go set noexpandtab
+"au FileType go set shiftwidth=4
+"au FileType go set softtabstop=4
+"au FileType go set tabstop=4
 
 au BufRead,BufNewFile .eslintrc.json setlocal filetype=json
 au BufRead,BufNewFile .babelrc setlocal filetype=json
@@ -108,6 +111,7 @@ let g:is_posix = 1
 let g:rainbow_active = 1
 let g:rainbow_conf = {
 	\	'separately': {
+  \   '*': {},
 	\		'nerdtree': 0,
 	\	}
 	\}
