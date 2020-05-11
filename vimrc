@@ -113,6 +113,24 @@ let g:rainbow_conf = {
 	\	'separately': {
   \   '*': {},
 	\		'nerdtree': 0,
+  \  'javascript': {
+  \    'operators': '_,\|+\|-\|\*\|\*\*\| / \|//\|===\|!==\|==\|!=\| < \|<=\| > \|>=\|:\|%\|&\||_',
+  \    'parentheses_options': 'containedin=jsxElement fold ',
+  \    'parentheses': [
+  \      'start=/\z((\)/ end=/)/ contains=@jsAll', 'start=/\[/ end=/\]/ contains=@jsAll',
+  \      'start=/{/ end=/}/ contains=@jsAll containedin=jsTemplateString',
+  \      'start=_<\z([^ />]*\)>\?_ end=_</\z1>_ end=_/>_ contains=jsxOpenTag,jsxAttrib,jsxExpressionBlock,jsxSpreadOperator,jsComment,@javascriptComments,javaScriptLineComment,javaScriptComment',
+  \    ],
+  \    'after': [
+  \      'syn clear jsParen', 'syn clear jsFuncArgs', 'syn clear jsxExpressionBlock',
+  \      'syn clear jsParensError', 'syn clear jsParenIfElse', 'syn clear jsDestructuringBlock',
+  \      'syn clear jsFuncBlock', 'syn clear jsArrowFuncArgs', 'syn clear jsParenSwitch',
+  \      'syn clear jsBlock', 'syn clear jsObject', 'syn clear jsxTag', 'syn clear jsTemplateExpression',
+  \      'syn clear jsParenRepeat', 'syn clear jsRepeatBlock'
+  \    ],
+  \    'contains_prefix': '',
+  \  },
+  \  'typescript': 0,
 	\	}
 	\}
 let g:surround_no_mappings = 1
@@ -152,6 +170,10 @@ nnoremap \ :Ag<SPACE>
 " coc.vim config
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+nmap <silent> ge :<C-u>CocList diagnostics<cr>
 
 " Use `:Format` to format current buffer
 command! -nargs=0 Format :call CocAction('format')

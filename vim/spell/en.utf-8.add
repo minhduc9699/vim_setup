@@ -52,3 +52,6 @@ metadata
 bigint
 fanpage
 lodash
+pyexcel
+xlsx
+businessline
