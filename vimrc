@@ -64,7 +64,8 @@ set background=dark
 set nowrap           " do not automatically wrap on load
 set formatoptions-=t " do not automatically wrap text when typing
 
-colorscheme dracula
+let g:quantum_italics=1
+colorscheme quantum
 
 filetype plugin indent on
 
@@ -190,7 +191,7 @@ map / <Plug>(easymotion-sn)
 
 " Lightline
 let g:lightline = {
-      \ 'colorscheme': 'dracula',
+      \ 'colorscheme': 'quantum',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'relativepath', 'cocstatus', 'readonly', 'modified' ] ],
