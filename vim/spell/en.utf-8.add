@@ -55,3 +55,5 @@ lodash
 pyexcel
 xlsx
 businessline
+dateutil
+tzlocal
