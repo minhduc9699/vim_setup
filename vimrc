@@ -156,8 +156,11 @@ map <C-h> :nohl<CR>
 " NERD tree configuration
 noremap <C-d> :NERDTreeToggle<CR>
 "nnoremap F :NERDTreeFind<CR>
-
 let NERDTreeShowHidden=1
+
+" TAGBAR key binding
+let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
+nmap <Leader>mm :TagbarToggle<CR>
 
 " fzf
 noremap ` :Files<CR>

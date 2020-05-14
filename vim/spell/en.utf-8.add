@@ -57,3 +57,6 @@ xlsx
 businessline
 dateutil
 tzlocal
+cond
+fromisoformat
+tagbar
