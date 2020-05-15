@@ -146,6 +146,8 @@ vmap <S-Tab> <gv
 "nnoremap <Up> :echoe "Use k"<CR>
 "nnoremap <Down> :echoe "Use j"<CR>
 
+nnoremap # ^
+
 nnoremap <Leader>w <C-w>
 nnoremap <Leader>\ :vsplit<CR>
 nnoremap <Leader>/ :split<CR>
