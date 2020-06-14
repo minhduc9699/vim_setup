@@ -137,6 +137,9 @@ let g:rainbow_conf = {
 let g:surround_no_mappings = 1
 xmap <Leader>s   <Plug>VSurround
 " Use tab with text block
+
+let g:UltiSnipsExpandTrigger = '<f5>'
+let g:UltiSnipsListSnippets = 'f4'
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
@@ -146,11 +149,12 @@ vmap <S-Tab> <gv
 "nnoremap <Up> :echoe "Use k"<CR>
 "nnoremap <Down> :echoe "Use j"<CR>
 
-nnoremap # ^
+map J <C-e>
+map K <C-y>
 
+nnoremap # ^
+nnoremap <C-s> :w<CR>
 nnoremap <Leader>w <C-w>
-nnoremap <Leader>\ :vsplit<CR>
-nnoremap <Leader>/ :split<CR>
 
 " Remove highlight
 map <C-h> :nohl<CR>
@@ -159,10 +163,12 @@ map <C-h> :nohl<CR>
 noremap <C-d> :NERDTreeToggle<CR>
 "nnoremap F :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['^node_modules$[[dir]]', '^__pycache__$[[dir]]']
 
 " TAGBAR key binding
 let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 nmap <Leader>mm :TagbarToggle<CR>
+
 
 " fzf
 noremap ` :Files<CR>
@@ -194,20 +200,49 @@ nmap <Leader>f :Format <CR>
 " Search n-chars
 map / <Plug>(easymotion-sn)
 
+function! MyFiletype()
+  return winwidth(0) > 70 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() : '') : ''
+endfunction
+
+function! LightLineFilename()
+  let name = ""
+  let subs = split(expand('%'), "/")
+  let i = 1
+  for s in subs
+    let parent = name
+    if  i == len(subs)
+      let name = len(parent) > 0 ? parent . '/' . s : s
+    elseif i == 1
+      let name = s
+    else
+      let part = strpart(s, 0, 10)
+      let name = len(parent) > 0 ? parent . '/' . part : part
+    endif
+    let i += 1
+  endfor
+  return name
+endfunction
+
 " Lightline
 let g:lightline = {
       \ 'colorscheme': 'quantum',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'relativepath', 'cocstatus', 'readonly', 'modified' ] ],
+      \             [ 'fileicon', 'filename', 'cocstatus', 'readonly', 'modified' ] ],
       \   'right': [ [ 'lineinfo', 'percent' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \              [ 'gitbranch'] ]
+      \ },
+      \ 'inactive': {
+      \   'left': [ [], ['fileicon'], [ 'filename' ] ],
+      \   'right': []
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
-      \   'cocstatus': 'coc#status'
+      \   'cocstatus': 'coc#status',
+      \   'filename': 'LightLineFilename',
+      \   'fileicon': 'MyFiletype'
       \ },
       \ }
 

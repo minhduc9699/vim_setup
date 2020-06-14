@@ -18,6 +18,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'dracula/vim'
 Plug 'tyrannicaltoucan/vim-quantum'
 Plug 'sheerun/vim-polyglot'
+Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
