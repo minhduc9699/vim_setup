@@ -140,6 +140,10 @@ xmap <Leader>s   <Plug>VSurround
 
 let g:UltiSnipsExpandTrigger = '<f5>'
 let g:UltiSnipsListSnippets = 'f4'
+" gitlens
+let g:blamer_enabled = 1
+
+
 vmap <Tab> >gv
 vmap <S-Tab> <gv
 
