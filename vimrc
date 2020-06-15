@@ -130,7 +130,6 @@ let g:rainbow_conf = {
   \    ],
   \    'contains_prefix': '',
   \  },
-  \  'typescript': 0,
 	\	}
 	\}
 let g:surround_no_mappings = 1
