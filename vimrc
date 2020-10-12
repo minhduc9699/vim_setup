@@ -162,7 +162,7 @@ nnoremap <Leader>w <C-w>
 map <C-h> :nohl<CR>
 
 " NERD tree configuration
-noremap <C-e> :NERDTreeToggle<CR>
+noremap <C-\> :NERDTreeToggle<CR>
 "nnoremap F :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['^node_modules$[[dir]]', '^__pycache__$[[dir]]']
