@@ -162,7 +162,7 @@ nnoremap <Leader>w <C-w>
 map <C-h> :nohl<CR>
 
 " NERD tree configuration
-noremap <C-d> :NERDTreeToggle<CR>
+noremap <C-e> :NERDTreeToggle<CR>
 "nnoremap F :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['^node_modules$[[dir]]', '^__pycache__$[[dir]]']
@@ -203,7 +203,7 @@ nmap <Leader>f :Format <CR>
 map / <Plug>(easymotion-sn)
 
 function! MyFiletype()
-  return winwidth(0) > 70 ? (strlen(&filetype) ? WebDevIconsGetFileTypeSymbol() : '') : ''
+  return winwidth(0) > 70 ? strlen(&filetype) : ''
 endfunction
 
 function! LightLineFilename()
