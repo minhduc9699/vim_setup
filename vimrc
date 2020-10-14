@@ -236,7 +236,7 @@ let g:lightline = {
       \ },
       \ 'inactive': {
       \   'left': [ [], ['fileicon'], [ 'filename' ] ],
-      \   'right': []
+      \   'right': [['gitbranch']]
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
