@@ -31,7 +31,6 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'sheerun/vim-polyglot'
 Plug 'jparise/vim-graphql'
-Plug 'ryanoasis/vim-devicons'
 Plug 'APZelos/blamer.nvim'
 call plug#end()
 
