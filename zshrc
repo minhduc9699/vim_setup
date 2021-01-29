@@ -10,40 +10,25 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/apps/.oh-my-zsh"
+export ZSH="/home/evisim/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
-POWERLEVEL9K_MODE="awesome-patched"
-ZSH_COLORIZE_STYLE="paraiso-dark"
+ZSH_THEME="robbyrussell"
+#POWERLEVEL9K_MODE="awesome-patched"
+#ZSH_COLORIZE_STYLE="paraiso-dark"
 
-alias chrome='open -a "Google Chrome"'
-alias connectToMindxApp='ssh mindxedu@18.139.155.160 -p 22'
-alias connectToMindxData='ssh mindxedu@18.136.99.173 -p 222'
-alias startMongod='mongod --dbpath /usr/local/var/mongodb/data/db'
-PATH="$HOME/anaconda3/bin:$PATH"
-PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
+#alias chrome='open -a "Google Chrome"'
+#alias connectToMindxApp='ssh mindxedu@18.139.155.160 -p 22'
+#alias connectToMindxData='ssh mindxedu@18.136.99.173 -p 222'
+#alias startMongod='mongod --dbpath /usr/local/var/mongodb/data/db'
+#PATH="$HOME/anaconda3/bin:$PATH"
+#PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/apps/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/apps/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/apps/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/apps/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
-export work_dir="/Volumes/Docs/TechKids"
 
 
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
@@ -106,9 +91,9 @@ export work_dir="/Volumes/Docs/TechKids"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting brew macports colorize docker docker-compose copyzshell ssh)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting brew macports colorize docker docker-compose copyzshell)
 
-source ~/.fonts/*.sh
+#source ~/.fonts/*.sh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -137,12 +122,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-POWERLEVEL10K_MODE='nerdfont-complete'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -1,1 +1,1 @@
-/Users/apps/Desktop/dotfiles/vimrc
+/home/evisim/vim_setup/vimrc
