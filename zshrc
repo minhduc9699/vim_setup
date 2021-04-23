@@ -1,4 +1,4 @@
-
+set -o vi
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block, everything else may go below.
@@ -23,7 +23,7 @@ ZSH_COLORIZE_STYLE="paraiso-dark"
 alias chrome='open -a "Google Chrome"'
 alias connectToMindxApp='ssh mindxedu@18.139.155.160 -p 22'
 alias connectToMindxData='ssh mindxedu@18.136.99.173 -p 222'
-alias startMongod='mongod --dbpath /usr/local/var/mongodb/data/db'
+alias startMongod='mongod --dbpath /usr/local/var/mongodb/data/db --config /usr/local/etc/mongod.conf --replSet rs0'
 PATH="$HOME/anaconda3/bin:$PATH"
 PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
@@ -48,7 +48,7 @@ unset __conda_setup
 export work_dir="/Volumes/Docs/TechKids"
 
 
-
+alias vi='nvim'
 
 
 # [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
@@ -148,6 +148,11 @@ POWERLEVEL10K_MODE='nerdfont-complete'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)
