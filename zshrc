@@ -45,7 +45,7 @@ unset __conda_setup
 
 
 
-export work_dir="/Volumes/Docs/TechKids"
+export work_dir="/Users/apps/TechKids"
 
 
 alias vi='nvim'
@@ -156,3 +156,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 fpath=(/opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/zsh $fpath)
 compinit
 # <<<<  Vagrant command completion (end)
+
+export NVM_DIR="/Users/apps/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

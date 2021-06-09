@@ -1,4 +1,4 @@
 {
   "python.jediEnabled": false,
-  "eslint.filetypes": ["javascript", "javascriptreact"]
+  "eslint.filetypes": ["javascript", "javascriptreact"],
 }

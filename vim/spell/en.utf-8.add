@@ -116,3 +116,5 @@ stdout
 socketio
 stdin
 useractivities
+noconflict
+yargs
