@@ -1,1 +1,1 @@
-/Users/apps/Desktop/dotfiles/vimrc
+/Users/ducpm/vim_setup/vimrc

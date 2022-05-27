@@ -10,7 +10,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/apps/.oh-my-zsh"
+export ZSH="/Users/ducpm/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -30,14 +30,14 @@ PATH="/Applications/Postgres.app/Contents/Versions/latest/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/apps/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/ducpm/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/apps/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/apps/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/ducpm/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/ducpm/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/apps/anaconda3/bin:$PATH"
+        export PATH="/Users/ducpm/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -45,7 +45,7 @@ unset __conda_setup
 
 
 
-export work_dir="/Users/apps/TechKids"
+export work_dir="/Users/ducpm/TechKids"
 
 
 alias vi='nvim'
@@ -111,9 +111,9 @@ alias vi='nvim'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting brew macports colorize docker docker-compose copyzshell ssh)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting brew macports colorize docker docker-compose )
 
-source ~/.fonts/*.sh
+#source ~/.fonts/*.sh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -157,5 +157,5 @@ fpath=(/opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/zsh $fpath)
 compinit
 # <<<<  Vagrant command completion (end)
 
-export NVM_DIR="/Users/apps/.nvm"
+export NVM_DIR="/Users/ducpm/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
