@@ -63,6 +63,9 @@ set background=dark
 set nowrap           " do not automatically wrap on load
 set formatoptions-=t " do not automatically wrap text when typing
 
+" markdown setting
+set conceallevel=0
+
 let g:quantum_italics=1
 colorscheme quantum
 

@@ -1,5 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =4
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/mindxeduu/vim_setup/vim'
+let g:netrw_dirhist_7='/home/mindxeduu/vim_setup'
+let g:netrw_dirhist_6='/home/mindxeduu/vim_setup/schemes'
+let g:netrw_dirhist_5='/home/mindxeduu/vim_setup'
 let g:netrw_dirhist_4='/Volumes/Docs/TechKids/pj/mindx-lms/mindx-lms-web/src/components'
 let g:netrw_dirhist_3='/Volumes/Docs/TechKids/pj/mindx-lms/mindx-lms-web/src/components/Alert'
 let g:netrw_dirhist_2='/Volumes/Docs/TechKids/pj/mindx-lms/mindx-lms-web/src/components'
