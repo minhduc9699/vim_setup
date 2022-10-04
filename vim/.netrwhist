@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/Users/ducpm'
+let g:netrw_dirhist_9='/Users/ducpm/vim_setup'
 let g:netrw_dirhist_8='/home/mindxeduu/vim_setup/vim'
 let g:netrw_dirhist_7='/home/mindxeduu/vim_setup'
 let g:netrw_dirhist_6='/home/mindxeduu/vim_setup/schemes'

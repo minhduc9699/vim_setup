@@ -1,1 +1,1 @@
-/home/mindxeduu/vim_setup/vimrc
+/Users/ducpm/vim_setup/vimrc

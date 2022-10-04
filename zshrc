@@ -111,7 +111,7 @@ alias vi='nvim'
 # Custom plugins may be added to $HOME/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting brew macports colorize docker docker-compose copyzshell ssh)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting brew macports colorize docker docker-compose copyzshell)
 
 #source $HOME/.fonts/*.sh
 
