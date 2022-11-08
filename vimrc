@@ -171,6 +171,7 @@ noremap <C-\> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['^node_modules$[[dir]]', '^__pycache__$[[dir]]']
 let g:NERDTreeGitStatusPorcelainVersion=1
+let g:NERDTreeMinimalMenu=1
 
 " TAGBAR key binding
 let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
