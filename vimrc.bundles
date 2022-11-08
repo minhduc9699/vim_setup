@@ -2,6 +2,7 @@ call plug#begin('~/.vim/bundle')
 
 " Define bundles via Github repos
 Plug 'itchyny/lightline.vim'
+Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'airblade/vim-gitgutter'

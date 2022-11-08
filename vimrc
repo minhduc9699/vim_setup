@@ -94,6 +94,7 @@ augroup END
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
+autocmd VimEnter * | call lightline#update()
 
 " Go file config
 "au FileType go set noexpandtab
@@ -235,8 +236,8 @@ let g:lightline = {
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
       \             [ 'fileicon', 'filename', 'cocstatus', 'readonly', 'modified' ] ],
-      \   'right': [ [ 'lineinfo', 'percent' ],
-      \              [ 'gitbranch'] ]
+      \   'right': [ [ 'lineinfo', 'percent'], ['fileformat', 'fileencoding'], ['gitbranch' ],
+      \              ]
       \ },
       \ 'inactive': {
       \   'left': [ [], ['fileicon'], [ 'filename' ] ],
@@ -245,7 +246,7 @@ let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' },
       \ 'component_function': {
-      \   'gitbranch': 'fugitive#head',
+      \   'gitbranch': 'gitbranch#name',
       \   'cocstatus': 'coc#status',
       \   'filename': 'LightLineFilename',
       \   'fileicon': 'MyFiletype'
