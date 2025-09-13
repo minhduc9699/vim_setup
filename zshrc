@@ -164,3 +164,7 @@ export NVM_DIR="$HOME/.nvm"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Added by Windsurf
+export PATH="/Users/ducpm/.codeium/windsurf/bin:$PATH"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
