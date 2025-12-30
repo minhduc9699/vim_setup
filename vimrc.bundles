@@ -5,7 +5,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'itchyny/vim-gitbranch'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
-Plug 'airblade/vim-gitgutter'
+" Plug 'airblade/vim-gitgutter'  " Replaced by gitsigns.nvim
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
@@ -18,7 +18,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dracula/vim'
 Plug 'tyrannicaltoucan/vim-quantum'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Replaced by native LSP
 Plug 'kamykn/spelunker.vim'
 Plug 'preservim/nerdcommenter'
 Plug 'Yggdroot/indentLine'
@@ -34,6 +34,30 @@ Plug 'APZelos/blamer.nvim'
 Plug 'weirongxu/plantuml-previewer.vim'
 Plug 'tyru/open-browser.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+
+" === Native LSP Stack ===
+Plug 'williamboman/mason.nvim'         " LSP server manager
+Plug 'williamboman/mason-lspconfig.nvim' " Mason-LSPconfig bridge
+Plug 'neovim/nvim-lspconfig'           " LSP configurations
+Plug 'hrsh7th/nvim-cmp'                " Completion engine
+Plug 'hrsh7th/cmp-nvim-lsp'            " LSP completion source
+Plug 'hrsh7th/cmp-buffer'              " Buffer completion
+Plug 'hrsh7th/cmp-path'                " Path completion
+Plug 'L3MON4D3/LuaSnip'                " Snippet engine
+Plug 'saadparwaiz1/cmp_luasnip'        " Snippet completion
+
+" === Treesitter (AST-based syntax highlighting) ===
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" === Git Integration ===
+Plug 'lewis6991/gitsigns.nvim'         " Better than gitgutter
+Plug 'kdheepak/lazygit.nvim'           " Optional: TUI git client
+
+" === Modern Enhancements (Optional) ===
+Plug 'folke/which-key.nvim'            " Keybinding hints
+Plug 'nvim-telescope/telescope.nvim'   " Modern finder (coexists with fzf)
+Plug 'nvim-lua/plenary.nvim'           " Required by telescope
+Plug 'akinsho/bufferline.nvim'         " Better buffer tabs
 call plug#end()
 
 " Local config

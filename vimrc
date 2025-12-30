@@ -187,18 +187,8 @@ nnoremap F :Ag <C-R><C-W><CR>
 nnoremap f /<C-R><C-W><CR>
 nnoremap \ :Ag<SPACE>
 
-" coc.vim config
-" Remap keys for gotos
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
-nmap <silent> ge :<C-u>CocList diagnostics<cr>
-
-" Use `:Format` to format current buffer
-command! -nargs=0 Format :call CocAction('format')
-
-nmap <Leader>f :Format <CR>
+" === COC keybindings removed - now handled by native LSP in lua/lsp-config.lua ===
+" Keybindings: gd, gy, gi, gr, ge, <Leader>f now use native LSP
 
 " Easymotion
 " s{char}{char} to move to {char}{char} over windows
@@ -236,7 +226,7 @@ let g:lightline = {
       \ 'colorscheme': 'quantum',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'fileicon', 'filename', 'cocstatus', 'readonly', 'modified' ] ],
+      \             [ 'fileicon', 'filename', 'readonly', 'modified' ] ],
       \   'right': [ [ 'lineinfo', 'percent'], ['fileformat', 'fileencoding'], ['gitbranch' ],
       \              ]
       \ },
@@ -248,7 +238,6 @@ let g:lightline = {
       \ 'subseparator': { 'left': '', 'right': '' },
       \ 'component_function': {
       \   'gitbranch': 'gitbranch#name',
-      \   'cocstatus': 'coc#status',
       \   'filename': 'LightLineFilename',
       \   'fileicon': 'MyFiletype'
       \ },
@@ -280,6 +269,23 @@ let g:fzf_colors =
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.vue'
 let g:closetag_emptyTags_caseSensitive = 1
 let g:jsx_ext_required = 0
+
+" ============================================================
+" === Lua Configurations (Native LSP + Treesitter + Git + Modern Tools) ===
+" ============================================================
+" Load configs after VimEnter to ensure plugins are loaded
+augroup LspSetup
+  autocmd!
+  autocmd VimEnter * lua require('lsp-config')
+  autocmd VimEnter * lua require('completion')
+  autocmd VimEnter * lua require('treesitter-config')
+  autocmd VimEnter * lua require('gitsigns-config')
+  autocmd VimEnter * lua require('lazygit-config')
+  " Optional modern tools
+  autocmd VimEnter * lua require('telescope-config')
+  autocmd VimEnter * lua require('whichkey-config')
+  autocmd VimEnter * lua require('bufferline-config')
+augroup END
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
