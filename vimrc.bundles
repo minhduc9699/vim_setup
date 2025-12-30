@@ -20,7 +20,6 @@ Plug 'dracula/vim'
 Plug 'tyrannicaltoucan/vim-quantum'
 " Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Replaced by native LSP
 Plug 'kamykn/spelunker.vim'
-Plug 'preservim/nerdcommenter'
 Plug 'Yggdroot/indentLine'
 Plug 'luochen1990/rainbow'
 Plug 'pangloss/vim-javascript'
