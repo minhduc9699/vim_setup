@@ -157,14 +157,26 @@ fpath=(/opt/vagrant/embedded/gems/2.2.14/gems/vagrant-2.2.14/contrib/zsh $fpath)
 compinit
 # <<<<  Vagrant command completion (end)
 
+# NVM Lazy Loading (saves ~300ms startup)
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Lazy load wrapper functions
+_load_nvm() {
+  unset -f nvm node npm npx yarn pnpm
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+}
+
+nvm() { _load_nvm && nvm "$@"; }
+node() { _load_nvm && node "$@"; }
+npm() { _load_nvm && npm "$@"; }
+npx() { _load_nvm && npx "$@"; }
+yarn() { _load_nvm && yarn "$@"; }
+pnpm() { _load_nvm && pnpm "$@"; }
 
 # Added by Windsurf
 export PATH="/Users/ducpm/.codeium/windsurf/bin:$PATH"
 export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
-
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 . "$HOME/.local/bin/env"
 
