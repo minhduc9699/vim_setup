@@ -94,7 +94,7 @@ augroup END
 
 autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
 autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
-autocmd VimEnter * | call lightline#update()
+autocmd VimEnter * if argc() > 0 | call lightline#update() | endif
 
 " Go file config
 "au FileType go set noexpandtab

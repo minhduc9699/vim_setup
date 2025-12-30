@@ -18,7 +18,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dracula/vim'
 Plug 'tyrannicaltoucan/vim-quantum'
-Plug 'ervandew/supertab'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'kamykn/spelunker.vim'
 Plug 'preservim/nerdcommenter'
