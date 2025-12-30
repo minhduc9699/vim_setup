@@ -13,8 +13,8 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'majutsushi/tagbar'
 Plug 'terryma/vim-multiple-cursors'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " Replaced by Telescope
+" Plug 'junegunn/fzf.vim'  " Replaced by Telescope
 Plug 'editorconfig/editorconfig-vim'
 Plug 'dracula/vim'
 Plug 'tyrannicaltoucan/vim-quantum'

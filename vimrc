@@ -178,14 +178,14 @@ let g:Tlist_Ctags_Cmd='/usr/local/Cellar/ctags/5.8_1/bin/ctags'
 nmap <Leader>mm :TagbarToggle<CR>
 
 
-" fzf
-noremap ` :Files<CR>
-noremap ; :Buffers<CR>
+" Telescope (replaced fzf)
+noremap ` <cmd>Telescope find_files<CR>
+noremap ; <cmd>Telescope buffers<CR>
 
 " bind \ (backward slash) to grep shortcut
-nnoremap F :Ag <C-R><C-W><CR>
+nnoremap F <cmd>Telescope grep_string<CR>
 nnoremap f /<C-R><C-W><CR>
-nnoremap \ :Ag<SPACE>
+nnoremap \ <cmd>Telescope live_grep<CR>
 
 " === COC keybindings removed - now handled by native LSP in lua/lsp-config.lua ===
 " Keybindings: gd, gy, gi, gr, ge, <Leader>f now use native LSP
@@ -248,44 +248,15 @@ let g:multi_cursor_next_key='<C-n>'
 let g:multi_cursor_prev_key='<C-p>'
 let g:multi_cursor_skip_key='<C-x>'
 
-" fzf.vim
-" Customize fzf colors to match your color scheme
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
-
 " Auto close tag
 let g:closetag_filenames = '*.html,*.js,*.jsx,*.vue'
 let g:closetag_emptyTags_caseSensitive = 1
 let g:jsx_ext_required = 0
 
 " ============================================================
-" === Lua Configurations (Native LSP + Treesitter + Git + Modern Tools) ===
+" === Lua Configurations ===
 " ============================================================
-" Load configs after VimEnter to ensure plugins are loaded
-augroup LspSetup
-  autocmd!
-  autocmd VimEnter * lua require('lsp-config')
-  autocmd VimEnter * lua require('completion')
-  autocmd VimEnter * lua require('treesitter-config')
-  autocmd VimEnter * lua require('gitsigns-config')
-  autocmd VimEnter * lua require('lazygit-config')
-  " Optional modern tools
-  autocmd VimEnter * lua require('telescope-config')
-  autocmd VimEnter * lua require('whichkey-config')
-  autocmd VimEnter * lua require('bufferline-config')
-augroup END
+lua require('init')
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
