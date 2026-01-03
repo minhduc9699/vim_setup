@@ -2,3 +2,8 @@ dist
 build
 vim/bundle/*
 backup-20251230-144829/
+.claude
+.claude/*
+plans
+plans/*
+CLAUDE.md
