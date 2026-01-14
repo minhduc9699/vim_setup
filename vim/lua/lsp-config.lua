@@ -118,8 +118,41 @@ vim.lsp.config.jsonls = {
   capabilities = capabilities,
 }
 
+-- Python (pylsp)
+vim.lsp.config.pylsp = {
+  cmd = { 'pylsp' },
+  filetypes = { 'python' },
+  root_markers = { 'pyproject.toml', 'setup.py', 'setup.cfg', 'requirements.txt', 'Pipfile', '.git' },
+  capabilities = capabilities,
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = { enabled = true, maxLineLength = 120 },
+        pyflakes = { enabled = true },
+        pylint = { enabled = false },
+      }
+    }
+  }
+}
+
+-- Rust (rust-analyzer)
+vim.lsp.config.rust_analyzer = {
+  cmd = { 'rust-analyzer' },
+  filetypes = { 'rust' },
+  root_markers = { 'Cargo.toml', 'rust-project.json', '.git' },
+  capabilities = capabilities,
+  settings = {
+    ['rust-analyzer'] = {
+      checkOnSave = true,
+      check = { command = 'clippy' },
+      cargo = { allFeatures = true },
+      procMacro = { enable = true },
+    }
+  }
+}
+
 -- Enable the configured servers
-vim.lsp.enable({ 'ts_ls', 'html', 'cssls', 'jsonls' })
+vim.lsp.enable({ 'ts_ls', 'html', 'cssls', 'jsonls', 'pylsp', 'rust_analyzer' })
 
 -- ============================================================
 -- DIAGNOSTIC CONFIGURATION (like COC)
